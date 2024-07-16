@@ -1,0 +1,152 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* color palette from <https://github.com/vuejs/theme> */
+:root {
+  --vt-c-white: #ffffff;
+  --vt-c-white-soft: #f8f8f8;
+  --vt-c-white-mute: #f2f2f2;
+
+  --vt-c-black: #181818;
+  --vt-c-black-soft: #444343;
+  --vt-c-black-mute: #575555;
+
+  --vt-c-indigo: #2c3e50;
+
+  --vt-c-accent-light-1: #aefaff;
+  --vt-c-accent-light-1-hover: #73a5a8;
+  --vt-c-accent-light-2: #c2ffbc;
+  --vt-c-accent-light-2-hover: #6f976c;
+  --vt-c-accent-dark-1: #0b518a;
+  --vt-c-accent-dark-1-hover: #1382dd;
+  --vt-c-accent-dark-2: #0c7451;
+  --vt-c-accent-dark-2-hover: #1ad194;
+
+  --vt-c-divider-light-1: rgba(60, 60, 60, 0.692);
+  --vt-c-divider-light-2: rgba(247, 0, 255, 0.445);
+  --vt-c-divider-dark-1: rgba(185, 185, 185, 0.65);
+  --vt-c-divider-dark-2: rgba(255, 134, 239, 0.493);
+
+  --vt-c-icon-light: rgba(16, 13, 192, 0.925);
+  --vt-c-icon-dark: rgb(199, 239, 255);
+
+  --vt-c-text-light-1: rgb(0, 138, 173);
+  --vt-c-text-light-2: #585858;
+  --vt-c-text-light-3: rgb(0, 138, 173);
+  --vt-c-text-hover-light: rgb(181, 219, 255);
+  --vt-c-text-dark-1: var(--vt-c-white);
+  --vt-c-text-dark-2: rgba(235, 235, 235, 0.64);
+  --vt-c-text-dark-3: rgba(255, 81, 0, 0.64);
+  --vt-c-text-hover-dark: rgb(255, 230, 0);
+
+  --vt-c-nav: #f1f5f9;
+  --vt-c-nav-active: #e2e8f0;
+  --vt-c-nav-hover: #cbd5e1;
+
+  --vt-c-nav-dark: #334155;
+  --vt-c-nav-active-dark: #475569;
+  --vt-c-nav-hover-dark: #64748b;
+}
+
+/* semantic color variables for this project */
+:root {
+  --color-background: var(--vt-c-white);
+  --color-background-soft: var(--vt-c-white-soft);
+  --color-background-mute: var(--vt-c-white-mute);
+
+  --color-background-dark: var(--vt-c-black);
+  --color-background-soft-dark: var(--vt-c-black-soft);
+  --color-background-mute-dark: var(--vt-c-black-mute);
+
+  --color-border: var(--vt-c-divider-light-1);
+  --color-border-hover: var(--vt-c-divider-light-2);
+
+  --color-border-dark: var(--vt-c-divider-dark-1);
+  --color-border-hover-dark: var(--vt-c-divider-dark-2);
+
+  --color-button: var(--vt-c-accent-light-1);
+  --color-button-text: var(--vt-c-text-light-2);
+  --color-button-hover: var(--vt-c-accent-light-1-hover);
+
+  --color-button-dark: var(--vt-c-accent-dark-1);
+  --color-button-text-dark: var(--vt-c-text-dark-2);
+  --color-button-hover-dark: var(--vt-c-accent-dark-1-hover);
+
+  --color-heading: var(--vt-c-text-light-1);
+  --color-text: var(--vt-c-text-light-2);
+
+  --color-heading-dark: var(--vt-c-text-dark-1);
+  --color-text-dark: var(--vt-c-text-dark-2);
+
+  --color-url: var(--vt-c-text-light-3);
+  --color-url-hover: var(--vt-c-text-hover-light);
+  --color-icon: var(--vt-c-icon-light);
+
+  --color-url-dark: var(--vt-c-text-dark-3);
+  --color-url-hover-dark: var(--vt-c-text-hover-dark);
+  --color-icon-dark: var(--vt-c-icon-dark);
+
+  --color-nav: var(--vt-c-nav);
+  --color-nav-active: var(--vt-c-nav-active);
+  --color-nav-hover: var(--vt-c-nav-hover);
+
+  --color-nav-dark: var(--vt-c-nav-dark);
+  --color-nav-active-dark: var(--vt-c-nav-active-dark);
+  --color-nav-hover-dark: var(--vt-c-nav-hover-dark);
+
+  --section-gap: 160px;
+}
+
+@layer base {
+  body {
+    @apply bg-[var(--color-background-soft)] dark:bg-[var(--color-background-soft-dark)];
+    @apply text-[var(--color-text)] dark:text-[var(--color-text-dark)];
+  }
+  h1 {
+    @apply text-3xl p-3 text-[var(--color-heading)] text-[var(--color-heading)] dark:text-[var(--color-heading-dark)] underline decoration-[var(--color-heading)] dark:decoration-[var(--color-heading-dark)] decoration-double;
+  }
+  h2 {
+    @apply text-2xl p-3 text-[var(--color-heading)] dark:text-[var(--color-heading-dark)] underline decoration-[var(--color-heading)] dark:decoration-[var(--color-heading-dark)];
+  }
+  h3 {
+    @apply text-xl p-3 text-[var(--color-heading)] dark:text-[var(--color-heading-dark)];
+  }
+  a {
+    @apply hover:underline;
+  }
+  header {
+    @apply bg-[var(--vt-c-nav)] dark:bg-[var(--vt-c-nav-dark)] shadow-md;
+  }
+  nav {
+    @apply mx-auto flex justify-between p-1;
+  }
+  nav ul {
+    @apply flex gap-2;
+  }
+  nav ul li {
+    @apply p-0 m-auto rounded-xl duration-300;
+  }
+  nav a {
+    @apply p-2 m-0 rounded-xl duration-300 hover:no-underline;
+    @apply hover:bg-[var(--vt-c-nav-hover)] dark:hover:bg-[var(--vt-c-nav-hover-dark)];
+  }
+  .list {
+    @apply list-disc list-inside p-3;
+  }
+}
+@layer components {
+  .btn {
+    @apply text-[var(--color-button-text)] dark:text-[var(--color-button-text-dark)] font-bold py-2 px-4 m-2 border border-[var(--color-border)] hover:border-[var(--color-border-hover)] dark:border-[var(--color-border-dark)] dark:hover:border-[var(--color-border-hover-dark)] rounded bg-[var(--color-button)] dark:bg-[var(--color-button-dark)] hover:bg-[var(--color-button-hover)] dark:hover:bg-[var(--color-button-hover-dark)];
+    @apply disabled:bg-gray-300 disabled:hover:bg-gray-300 disabled:border-gray-400 disabled:hover:border-gray-400;
+  }
+  .card {
+    @apply p-3 rounded-md bg-[var(--color-background-mute)] dark:bg-[var(--color-background-mute-dark)] shadow-md h-full;
+  }
+}
+
+.router-link-active,
+.router-link-exact-active {
+  @apply text-[var(--color-heading)] dark:text-[var(--color-heading-dark)];
+  @apply bg-[var(--color-nav-active)] dark:bg-[var(--color-nav-active-dark)];
+}
