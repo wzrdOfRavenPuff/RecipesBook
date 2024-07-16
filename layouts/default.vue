@@ -4,14 +4,10 @@
       <nav class="container">
         <NuxtLink to="/" class="font-bold">Home</NuxtLink>
         <ul class="">
-          <!-- <li><NuxtLink to="/">Home</NuxtLink></li> -->
-          <!-- <li>Games</li> -->
-          <!-- <li><NuxtLink to="/mastermind">Mastermind</NuxtLink></li> -->
-          <!-- <li><NuxtLink to="/tictactoe">Tic Tac Toe</NuxtLink></li> -->
           <li><NuxtLink to="/todo">Todo</NuxtLink></li>
           <li><NuxtLink to="/about">About</NuxtLink></li>
         </ul>
-        <!-- <CommonDarkModeIcon /> -->
+        <CommonDarkModeIcon />
       </nav>
     </header>
     <!-- output the page content -->

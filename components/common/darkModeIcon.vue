@@ -5,9 +5,8 @@
 </script>
 
 <template>
-  darkness
-
-  <!-- {{ isDark ? 'Enable light mode' : 'Enable dark mode' }}
+  {{ isDark ? 'Enable light mode' : 'Enable dark mode' }}
+  <!--
   <button @click="toggleDark()">
     <div v-if="isDark">
       <svg
@@ -46,7 +45,8 @@
         <path d="M16.2 4a9.03 9.03 0 1 0 3.9 12a6.5 6.5 0 1 1 -3.9 -12" />
       </svg>
     </div>
-  </button> -->
+  </button>
+  -->
 </template>
 
 <style scoped></style>
